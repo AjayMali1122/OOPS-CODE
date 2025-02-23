@@ -1,0 +1,81 @@
+//package Hirachical;
+
+class A
+{
+int a = 10;
+public void m1()
+{
+	System.out.println("m1.....");
+}
+}
+
+class B extends A
+{
+	public void m2()
+	{
+		System.out.println("m2.....");
+    }
+}
+class C extends A
+{
+	String name = "ajay";
+}
+
+class D extends A
+{
+	String y = "10";
+}
+
+class E extends A
+{
+	public int m4(int y)
+	{
+		System.out.println("m4.....");
+		return 3;
+    }
+}
+
+class S extends B
+{
+	float f=2.4f;
+}
+
+class Z extends C
+{
+	public void m5()
+	{
+		System.out.println("m5.....");
+    }
+}
+
+class Y extends C
+{
+	public void m6()
+	{
+		System.out.println("m6.....");
+    }
+}
+public class Final {
+
+	public static void main(String[] args) {
+       S s = new S();
+		System.out.println(s.f);
+		s.m2();
+		s.m1();
+		
+		Z z = new Z();
+		System.out.println(z.name);
+         z.m5();
+         
+         Y y = new Y();
+         y.m6();
+         
+         D d = new D();
+         System.out.println(d.y);
+         
+         E e = new E();
+         System.out.println(e.m4(6));
+
+	}
+
+}
