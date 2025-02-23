@@ -1,0 +1,50 @@
+//package Multilevel;
+
+class A                                                                //parent class
+{
+	public void m1()
+	{
+		System.out.println("simple method");
+	}
+}
+
+class B extends A                                                    //child class 
+{
+	public void m2(int a,int b)
+	{
+		System.out.println("simple parameterized method");
+	}
+}
+
+class C extends B                                                           //child class
+{
+	public int  m3()
+	{
+		System.out.println("return  method");
+		return 6;
+	}
+}
+
+class D extends C                                          //child class
+{
+	public int  m4(int a,int b)
+	{
+		int c=a+b;
+		System.out.println("return with parameteried method");
+		return c;
+	}
+}
+
+
+public class Last {
+
+	public static void main(String[] args) {
+      D d = new D();
+      d.m1();
+      d.m2(10, 20);
+      System.out.println(d.m3());
+      System.out.println(d.m4(5,10));
+
+	}
+
+}
