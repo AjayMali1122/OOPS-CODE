@@ -1,0 +1,47 @@
+//package Multilevel;
+
+class Ajay {
+    int rollno = 18;
+    String name = "Kishan";
+    public void m1() {
+        System.out.println("parent class");
+    }
+}
+
+class Akshay extends Ajay {
+    public void m2() {
+        System.out.println("child class B inheritance from A");
+    }
+}
+
+class Pooja extends Akshay {
+    public int m3() {
+        System.out.println("child class C inheritance from B");
+        return 3;
+    }
+}
+
+class Prasad extends Pooja {
+    public Prasad m4() {
+        System.out.println("child class D inheritance from C");
+        return null;  // Returning the current object instead of null
+    }
+}
+
+public class Last2 {
+    public static void main(String[] args) {
+        Prasad f = new Prasad(); // Correct object creation
+
+        System.out.println(f.rollno);
+        System.out.println(f.name);
+
+        f.m1();
+        f.m2();
+        
+        int m = f.m3();
+        System.out.println(m);
+        
+        Prasad w = f.m4();
+        System.out.println(w); // Prints object reference instead of null
+    }
+}
