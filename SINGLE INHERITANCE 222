@@ -1,0 +1,30 @@
+package Singallevel;
+ class A                                              //PARENT CLASS 
+{
+	 int rollno = 18;
+	  String  name = "Kishan";
+	 public void m1()
+	 {
+	  System.out.println("jor se bolo");
+	 }
+}
+ class B extends A                                          //CHILD CLASS
+ {
+	 public void m2()
+	 {
+		 System.out.println("jay mata di");
+	 }
+
+ }
+ 
+public class Demo2 {
+
+	public static void main(String[] args) {
+    B b = new B();
+    System.out.println(b.rollno);
+    System.out.println(b.name);
+     b.m1();
+     b.m2();
+	}
+
+}
